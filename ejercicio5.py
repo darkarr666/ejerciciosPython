@@ -2,7 +2,7 @@ def pedirEdad():
     try:
         entrada = input("Ingresa una edad o escribe 'fin' para imprimir todas las edades: ")
         if int(entrada) >= 0:
-            return entrada
+            return int(entrada)
         else:
             print("No se aceptan edades negativas")
     except ValueError:
@@ -19,7 +19,7 @@ edades = []
 while True:
     entrada = pedirEdad() # Llamada a pedirEdad
     if str(entrada) == "None":
-        None
+        continue
     else:
         if entrada == "fin":
             break
