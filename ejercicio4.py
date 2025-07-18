@@ -1,3 +1,6 @@
+#este programa nos pide edades hasta que escribamos fin, en ese momento imprime todas las edades ingresadas (almacenadas en un arreglo)
+# las imprime, nos dice cuantas son (con len(arreglo)) y saca el promedio de todas.
+
 arreglo = []
 
 while True:
@@ -27,16 +30,16 @@ print("Edades registradas: ", " ".join(arreglostr)) """
 
 
 #para este caso es mejor usar:
-print("Las edades ingresadas fueron",", ".join(str(numero)for numero in arreglo))
+print("Las edades ingresadas fueron:",", ".join(str(numero)for numero in arreglo))
 #el .join está ligado al ", ", entonces, lo que hacemos es que .join
 #concatena los elementos de nuestro arreglo (sobre el que iteramos) en una nueva cadena, entonces, primero iteramos sobre nuestro arreglo con el
 #for, luego lo convertimos a cadena y lo imprimimos antes de una coma y espacio.
 
-#sintaxis .join => ", ".join(mi_lista)
+#sintaxis .join => ", ".join(mi_lista) (pero en este caso vamos a iterar sobre cada elemento del arreglo, para no convertir todo nuestro arreglo en cadenas)
 
 print(f"Total de edades: {len(arreglo)}")
 
-promedio = sum(arreglo)/len(arreglo)
+promedio = sum(arreglo)/len(arreglo) #algo normal, hacemos el promedio
 
-print(f"El promedio de las esades es: {promedio:.2f}")
-
+print(f"El promedio de las esades es: {promedio:.2f}") #Ponemos dos decimales al promedio
+#también podemos usar "print(f"El promedio es: {round(promedio, 2)}")" para que por ejemplo 14.0 se quede como 14.0 y no como 14.00

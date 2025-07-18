@@ -8,7 +8,7 @@ def pedirEdad(): # Aquí vamos a crear la función que pide la edad
         else:
             print("No se aceptan edades negativas") #Si no es un número entero, imprimimos que no se aceptan edades negativas, en este caso retorna None, que vemos en 
             #la parte de if str(entrada) == "none", en la linea 25
-            return "None"
+            return "None" 
     except ValueError: #en caso de que no sea número, verificamos que la cadena sea Fin, FIN o fin, en ese caso, retornamos la cadena "fin"
         if entrada.lower()  == "fin":
             return "fin"

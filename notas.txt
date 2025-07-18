@@ -1,0 +1,20 @@
+En resumen: estructuras fundamentales de Python
+
+Categoría	            Ejemplos comunes
+
+Sentencias	            if, for, break, def
+Funciones	            print(), sum()
+Métodos	                .append(), .upper()
+Operadores	            +, ==, in, and
+Clases/Objetos	        class, objeto.metodo()
+Expresiones lambda	    lambda x: x+1
+Comprehensions	        [x for x in ...]
+Decoradores	            @decorador
+
+GIT:
+
+Antes de trabajar => git pull
+
+Al terminar =>  git add .
+                git commit -m "Comentario"
+                git push
