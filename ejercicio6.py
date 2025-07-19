@@ -1,3 +1,5 @@
+#este ejercicio pide edades hasta ingresar "fin", luego imprime métricas, como la menor edad, mayor, promedio y la cantidad de menores
+
 def pedirEdad(): # Aquí vamos a crear la función que pide la edad
     try: #Usaremos el try para verificar que ingrese un número, y en caso de que sea un número, igual verificamos que no sea negativo, si es positivo retornamos la entrada
         #con "return int(entrada)" esto para que se retorne un entero, y no una cadena

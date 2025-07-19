@@ -1,3 +1,6 @@
+#este programa separa en 3 listas diferentes jovenes, adultos o adultos mayores dependiendo de la edad ingresada
+
+
 def pedirEdad(): # Aquí vamos a crear la función que pide la edad
     try: #Usaremos el try para verificar que ingrese un número, y en caso de que sea un número, igual verificamos que no sea negativo, si es positivo retornamos la entrada
         #con "return int(entrada)" esto para que se retorne un entero, y no una cadena
@@ -23,12 +26,9 @@ def mostrarResultados(lista): #definimos la función para mostrar resultados, qu
 
 
 
-
-contador = 0
-menores = []
+menores = [] # Definimos 3 arreglos vacíos. 
 adultos = []
 adultosmay = []
-edades = [] #definimos nuestro arreglo edades, obviamente vacío
 
 while True: #Creamos un ciclo while, que se rompe hasta que entrada es igual a fin
     entrada = pedirEdad() # Llamada a pedirEdad
@@ -40,15 +40,15 @@ while True: #Creamos un ciclo while, que se rompe hasta que entrada es igual a f
             break
     
     if entrada < 18:
-        menores.append(entrada)
+        menores.append(entrada) #en caso de cierta condición, metemos entrada en una lista diferente 
     elif 18 <= entrada < 60:
         adultos.append(entrada)
     else:
         adultosmay.append(entrada)
 
 
-if menores: 
-    print("Menores")
+if menores: #si la lista menores no está vacía
+    print("Menores") #esto no es tan optimo, se corrige en el ejercicio 9, se usa fstring, y pasamos como parametro una cadena llamada "menores"
     mostrarResultados(menores) 
 
 else: 
