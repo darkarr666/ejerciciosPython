@@ -18,3 +18,14 @@ Antes de trabajar => git pull
 Al terminar =>  git add .
                 git commit -m "Comentario"
                 git push
+
+Función main:
+
+def main():
+    print("Este código se ejecuta solo si se ejecuta el script directamente.")
+    # Aquí va la lógica principal del programa
+    nombre = input("Ingresa tu nombre: ")
+    print(f"Hola, {nombre}!")
+
+if __name__ == "__main__":
+    main()

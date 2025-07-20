@@ -1,18 +1,29 @@
-# Este programa pide una frase y cuenta cuantas veces aparece cada palabra dentro de esta frase
+import re
 
-def imprimir_palabras(texto):    
-    print("el texto contiene algo.")
+def limpiar_texto(texto):
+    nuevo_texto = re.sub(r'[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]', '', texto).lower() #en esa parte, r es para eliminar \n o \t cosas así, tipo saltos de linea
+                                                        # luego sigue la expresión regular, el ^es una negación, es decir, esta parte elimina todo
+                                            # lo que NO está en ese conjunto, entonces deja a-z, A-Z, y todas las acentuadas y ñ Ñ
+                            # .sub es "substitute" o "sustituír" 
+                            # sintaxis re.sub("a", "X", "casa")  ➜  "cXsX" \s representa espacios en blancos, para que los deje, es de space
+
+    return nuevo_texto
+    
+
+def contar_palabras(texto):
+    palabras = texto.split()
+    return palabras
+
+def imprimir_reporte(diccionario):
+    print("")
    
 
 def main():
-    while True:
-        texto = input("Ingrese un texto, posteriomente se indicará cuantas veces se usó cada palabra en él: ")
-        if texto:
-            imprimir_palabras(texto)  
-            break 
-        else:
-            print("el texto está vacío")
-            continue
+    texto = input("Ingresa una frase, luego se contarán cuantas veces aparece cada palabra de esta misma: ")
+    nuevo_texto = limpiar_texto(texto)
+    print(contar_palabras(nuevo_texto))
+    
 
-if __name__ == "__main__":
+
+if __name__ == "__main__": 
     main()
