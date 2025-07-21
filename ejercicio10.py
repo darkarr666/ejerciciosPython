@@ -24,7 +24,7 @@ def contar_palabras(texto):
 def imprimir_reporte(diccionario):
     print("Palabras encontradas")
     for palabra in sorted(diccionario): #sorted ordena alfabeticamente el arreglo o tupla o lo que sea
-        print(f"Palabra {palabra} se encontró -> {diccionario[palabra]} veces ")
+        print(f"Palabra {palabra} se encontró -> {diccionario[palabra]} veces ") 
    
 
 def main():
